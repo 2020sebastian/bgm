@@ -123,19 +123,19 @@ export default function Home() {
 
             {/* Community Stats - Mobile Optimized */}
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-8 sm:mb-12 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center animate-float">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center hover:animate-float transition-transform duration-300 hover:-translate-y-2">
                 <div className="text-2xl sm:text-3xl font-bold text-yellow-300">{memberCount.toLocaleString()}</div>
                 <div className="text-xs sm:text-sm text-green-100">Active Members</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center animate-float" style={{animationDelay: '0.5s'}}>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center hover:animate-float transition-transform duration-300 hover:-translate-y-2">
                 <div className="text-2xl sm:text-3xl font-bold text-blue-300">$126K+</div>
                 <div className="text-xs sm:text-sm text-green-100">Total Earned</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center animate-float" style={{animationDelay: '1s'}}>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center hover:animate-float transition-transform duration-300 hover:-translate-y-2">
                 <div className="text-2xl sm:text-3xl font-bold text-purple-300">4.9★</div>
                 <div className="text-xs sm:text-sm text-green-100">Community Rating</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center animate-float" style={{animationDelay: '1.5s'}}>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center hover:animate-float transition-transform duration-300 hover:-translate-y-2">
                 <div className="text-2xl sm:text-3xl font-bold text-pink-300">24/7</div>
                 <div className="text-xs sm:text-sm text-green-100">Support & Help</div>
               </div>

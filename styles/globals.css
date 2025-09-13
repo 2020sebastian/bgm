@@ -113,6 +113,12 @@ a {
     transform: none;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   }
+  
+  /* Disable float animation on touch devices */
+  .hover\:animate-float:hover {
+    animation: none;
+    transform: none;
+  }
 }
 
 /* Active states for better mobile feedback */
