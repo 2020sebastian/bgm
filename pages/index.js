@@ -474,7 +474,7 @@ export default function Home() {
                   💳 No setup fees • 👥 Instant community access • 🎯 Personalized matching
                 </div>
                 <div className="text-xs text-gray-500">
-                  🎁 Early bird special: First 500 users get lifetime access at 50% off
+                  🎁 Founding members get 60% off forever
                 </div>
               </div>
             </div>
