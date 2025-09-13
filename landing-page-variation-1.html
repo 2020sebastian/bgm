@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Missing Out on $3,000+ in Bank Bonuses | BonusGuide.me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .counter-animation { animation: countUp 2s ease-out; }
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-gray-900">BonusGuide.me</div>
+                <div class="text-sm text-gray-600">
+                    🚀 <span id="waitlist-count">1,247</span> smart savers already joined
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Stop Missing Out on <span class="text-yellow-300">$3,000+</span><br>
+                in Bank Bonuses Every Year
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+                The average American misses $3,450 in bank bonuses yearly because they can't track eligibility across 200+ banks. We solve that in 30 seconds.
+            </p>
+            
+            <!-- Value Props -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <div class="text-3xl mb-2">⚡</div>
+                    <h3 class="font-semibold mb-2">Instant Matching</h3>
+                    <p class="text-sm text-blue-100">Know your eligibility for all bonuses in 30 seconds</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <div class="text-3xl mb-2">🎯</div>
+                    <h3 class="font-semibold mb-2">State-Specific</h3>
+                    <p class="text-sm text-blue-100">Only see bonuses actually available in your location</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <div class="text-3xl mb-2">💰</div>
+                    <h3 class="font-semibold mb-2">Parallel Banking</h3>
+                    <p class="text-sm text-blue-100">Open multiple accounts simultaneously with our system</p>
+                </div>
+            </div>
+
+            <!-- Early Access Form -->
+            <div class="bg-white rounded-2xl p-8 shadow-2xl max-w-md mx-auto">
+                <div class="text-gray-900 mb-6">
+                    <h2 class="text-2xl font-bold mb-2">Get Early Access</h2>
+                    <p class="text-gray-600">Join 500 founding members</p>
+                </div>
+                <form id="waitlist-form" class="space-y-4">
+                    <input 
+                        type="email" 
+                        placeholder="Enter your email address"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
+                        required
+                    >
+                    <button 
+                        type="submit"
+                        class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition duration-200"
+                    >
+                        Secure My Spot Now →
+                    </button>
+                </form>
+                <div class="mt-4 text-center">
+                    <div class="inline-flex items-center bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                        🎁 Founding members get 60% off forever
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2">Only 253 spots remaining</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Earnings Calculator -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Calculate Your Potential Earnings
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    See exactly how much you could earn from bank bonuses in your state
+                </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-2xl p-8">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Select your state:</label>
+                            <select id="state-selector" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-900">
+                                <option value="ca">California</option>
+                                <option value="tx">Texas</option>
+                                <option value="ny">New York</option>
+                                <option value="fl">Florida</option>
+                                <option value="il">Illinois</option>
+                                <option value="pa">Pennsylvania</option>
+                                <option value="oh">Ohio</option>
+                                <option value="ga">Georgia</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Do you have direct deposit?</label>
+                            <div class="flex space-x-4">
+                                <label class="flex items-center">
+                                    <input type="radio" name="dd" value="yes" class="mr-2" checked>
+                                    <span>Yes</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="dd" value="no" class="mr-2">
+                                    <span>No (we have workarounds!)</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Credit score range:</label>
+                            <select id="credit-selector" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-900">
+                                <option value="excellent">750+ (Excellent)</option>
+                                <option value="good">700-749 (Good)</option>
+                                <option value="fair">650-699 (Fair)</option>
+                                <option value="poor">Below 650</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-gradient-to-br from-green-400 to-blue-500 rounded-xl p-8 text-white">
+                            <div class="mb-4">
+                                <div class="text-5xl font-bold counter-animation" id="earnings-amount">$2,850</div>
+                                <div class="text-xl opacity-90">potential earnings</div>
+                            </div>
+                            <div class="text-lg">
+                                From <span class="font-semibold" id="bonus-count">12</span> eligible bonuses
+                            </div>
+                            <div class="text-sm opacity-75 mt-2">
+                                Based on your profile
+                            </div>
+                        </div>
+                        
+                        <button class="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-200">
+                            See My Full Bonus List →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-blue-400">$127K+</div>
+                    <div class="text-gray-300">Earned by beta users</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-green-400">94%</div>
+                    <div class="text-gray-300">Success rate</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-purple-400">15 min</div>
+                    <div class="text-gray-300">Average setup time</div>
+                </div>
+            </div>
+            
+            <blockquote class="text-xl italic text-gray-300 mb-6 max-w-2xl mx-auto">
+                "I found $2,400 in bonuses I actually qualified for in my first week. This tool pays for itself instantly."
+            </blockquote>
+            <cite class="text-gray-400">— Sarah K., Beta Tester from Austin, TX</cite>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 bg-blue-600">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h2 class="text-4xl font-bold mb-4">Don't Let Another Bonus Expire</h2>
+            <p class="text-xl mb-8 opacity-90">Join 500 smart savers who never miss a qualifying bonus again</p>
+            
+            <div class="bg-white rounded-2xl p-6 max-w-md mx-auto">
+                <form class="space-y-4">
+                    <input 
+                        type="email" 
+                        placeholder="Enter your email to get started"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900"
+                        required
+                    >
+                    <button 
+                        type="submit"
+                        class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-200"
+                    >
+                        Get Instant Access →
+                    </button>
+                </form>
+                <p class="text-xs text-gray-600 mt-3">
+                    ⏰ Limited time: 60% off launch price + lifetime updates
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2025 BonusGuide.me. All rights reserved. • Privacy Policy • Terms of Service</p>
+            <p class="text-sm mt-2">Not affiliated with any bank. All bonus amounts are estimates based on current offers.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple counter animation for earnings
+        function animateValue(id, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                document.getElementById(id).innerText = '$' + Math.floor(progress * (end - start) + start).toLocaleString();
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Calculator functionality
+        const stateData = {
+            'ca': { amount: 3200, count: 15 },
+            'tx': { amount: 2850, count: 12 },
+            'ny': { amount: 3450, count: 16 },
+            'fl': { amount: 2650, count: 11 },
+            'il': { amount: 2950, count: 13 },
+            'pa': { amount: 2400, count: 10 },
+            'oh': { amount: 2200, count: 9 },
+            'ga': { amount: 2750, count: 11 }
+        };
+
+        function updateCalculator() {
+            const state = document.getElementById('state-selector').value;
+            const credit = document.getElementById('credit-selector').value;
+            const dd = document.querySelector('input[name="dd"]:checked').value;
+            
+            let multiplier = 1;
+            if (credit === 'good') multiplier = 0.9;
+            if (credit === 'fair') multiplier = 0.7;
+            if (credit === 'poor') multiplier = 0.5;
+            if (dd === 'no') multiplier *= 0.8;
+            
+            const baseAmount = stateData[state].amount;
+            const baseCount = stateData[state].count;
+            const finalAmount = Math.floor(baseAmount * multiplier);
+            const finalCount = Math.floor(baseCount * multiplier);
+            
+            animateValue('earnings-amount', 0, finalAmount, 1500);
+            document.getElementById('bonus-count').textContent = finalCount;
+        }
+
+        // Event listeners
+        document.getElementById('state-selector').addEventListener('change', updateCalculator);
+        document.getElementById('credit-selector').addEventListener('change', updateCalculator);
+        document.querySelectorAll('input[name="dd"]').forEach(radio => {
+            radio.addEventListener('change', updateCalculator);
+        });
+
+        // Form submission
+        document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thanks for joining! Check your email for next steps.');
+        });
+
+        // Initialize
+        updateCalculator();
+    </script>
+</body>
+</html>
