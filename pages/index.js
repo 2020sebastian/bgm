@@ -451,7 +451,7 @@ export default function Home() {
             <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-xl mx-auto shadow-2xl">
               <div className="text-gray-900 mb-6">
                 <h3 className="text-xl sm:text-2xl font-bold mb-2">Join Our Community Today</h3>
-                <p className="text-gray-600">Start your journey with thousands of successful members</p>
+                <p className="text-gray-600">Start your journey with hundreds of successful members</p>
               </div>
               
               <form onSubmit={handleFormSubmit} className="space-y-4">
