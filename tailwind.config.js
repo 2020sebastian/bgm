@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '475px',
+      },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
       },
@@ -17,6 +20,14 @@ module.exports = {
           600: '#16a34a',
           700: '#15803d',
         },
+      },
+      spacing: {
+        '15': '3.75rem',
+        '18': '4.5rem',
+      },
+      minHeight: {
+        '44': '44px',
+        '48': '48px',
       },
       animation: {
         'float': 'float 3s ease-in-out infinite',
@@ -37,6 +48,9 @@ module.exports = {
           '0%, 100%': { transform: 'scale(1)' },
           '50%': { transform: 'scale(1.05)' },
         },
+      },
+      backdropBlur: {
+        'xs': '2px',
       },
     },
   },

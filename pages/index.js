@@ -76,18 +76,25 @@ export default function Home() {
       </Head>
 
       <div className="min-h-screen bg-gray-50" style={{fontFamily: 'Inter, sans-serif'}}>
-        {/* Header */}
+        {/* Header - Mobile Optimized */}
         <header className="bg-white shadow-sm sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div className="flex justify-between items-center">
-              <div className="flex items-center space-x-4">
-                <div className="text-2xl font-bold text-gray-900">💰 BonusTracker</div>
-                <span className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
-                  Community
-                </span>
+          <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-3 sm:py-4">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
+              <div className="flex items-center justify-between sm:justify-start">
+                <div className="flex items-center space-x-2 sm:space-x-4">
+                  <div className="text-xl sm:text-2xl font-bold text-gray-900">💰 BonusTracker</div>
+                  <span className="bg-green-100 text-green-800 text-xs font-medium px-2 py-0.5 rounded-full">
+                    Community
+                  </span>
+                </div>
+                {/* Mobile member count - compact */}
+                <div className="sm:hidden member-counter text-white px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-green-600 to-emerald-600">
+                  👥 {memberCount.toLocaleString()}
+                </div>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="member-counter text-white px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-green-600 to-emerald-600">
+              <div className="flex flex-col xs:flex-row items-start xs:items-center space-y-1 xs:space-y-0 xs:space-x-4 sm:space-x-4">
+                {/* Desktop member counter */}
+                <div className="hidden sm:block member-counter text-white px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-green-600 to-emerald-600">
                   👥 <span id="live-members">{memberCount.toLocaleString()}</span> active members
                 </div>
                 <div className="text-sm text-gray-600">
@@ -98,46 +105,46 @@ export default function Home() {
           </div>
         </header>
 
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-green-500 via-emerald-600 to-teal-700 text-white py-20">
+        {/* Hero Section - Mobile Optimized */}
+        <section className="bg-gradient-to-br from-green-500 via-emerald-600 to-teal-700 text-white py-12 sm:py-16 lg:py-20">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="mb-8">
-              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
+            <div className="mb-6 sm:mb-8">
+              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-6">
                 <span className="text-sm font-medium">🏆 #1 Bank Bonus Community</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight px-2">
                 Stop Leaving Money on the Table
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-4xl mx-auto">
+              <p className="text-lg sm:text-xl lg:text-2xl mb-6 sm:mb-8 text-green-100 max-w-4xl mx-auto px-2">
                 You're missing out on thousands in bank bonuses because you can't track all the requirements. 
                 Join <strong>{memberCount.toLocaleString()}+ smart savers</strong> earning bonuses together.
               </p>
             </div>
 
-            {/* Community Stats */}
-            <div className="grid md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center animate-float">
-                <div className="text-3xl font-bold text-yellow-300">{memberCount.toLocaleString()}</div>
-                <div className="text-sm text-green-100">Active Members</div>
+            {/* Community Stats - Mobile Optimized */}
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-8 sm:mb-12 max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center animate-float">
+                <div className="text-2xl sm:text-3xl font-bold text-yellow-300">{memberCount.toLocaleString()}</div>
+                <div className="text-xs sm:text-sm text-green-100">Active Members</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center animate-float" style={{animationDelay: '0.5s'}}>
-                <div className="text-3xl font-bold text-blue-300">$126K+</div>
-                <div className="text-sm text-green-100">Total Earned</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center animate-float" style={{animationDelay: '0.5s'}}>
+                <div className="text-2xl sm:text-3xl font-bold text-blue-300">$126K+</div>
+                <div className="text-xs sm:text-sm text-green-100">Total Earned</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center animate-float" style={{animationDelay: '1s'}}>
-                <div className="text-3xl font-bold text-purple-300">4.9★</div>
-                <div className="text-sm text-green-100">Community Rating</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center animate-float" style={{animationDelay: '1s'}}>
+                <div className="text-2xl sm:text-3xl font-bold text-purple-300">4.9★</div>
+                <div className="text-xs sm:text-sm text-green-100">Community Rating</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center animate-float" style={{animationDelay: '1.5s'}}>
-                <div className="text-3xl font-bold text-pink-300">24/7</div>
-                <div className="text-sm text-green-100">Support & Help</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center animate-float" style={{animationDelay: '1.5s'}}>
+                <div className="text-2xl sm:text-3xl font-bold text-pink-300">24/7</div>
+                <div className="text-xs sm:text-sm text-green-100">Support & Help</div>
               </div>
             </div>
 
-            {/* Early Access Form - From Variation 1 */}
-            <div className="bg-white rounded-3xl p-8 shadow-2xl max-w-md mx-auto">
+            {/* Early Access Form - Mobile Optimized */}
+            <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl max-w-md mx-auto">
               <div className="text-gray-900 mb-6">
-                <h2 className="text-2xl font-bold mb-2">Get Early Access</h2>
+                <h2 className="text-xl sm:text-2xl font-bold mb-2">Get Early Access</h2>
                 <p className="text-gray-600">Join 500 founding members</p>
               </div>
               
@@ -145,12 +152,12 @@ export default function Home() {
                 <input 
                   type="email" 
                   placeholder="Enter your email address"
-                  className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900 text-lg"
+                  className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900 text-base sm:text-lg touch-manipulation"
                   required
                 />
                 <button 
                   type="submit"
-                  className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold py-4 px-6 rounded-lg hover:from-green-700 hover:to-emerald-700 transition duration-200 text-xl"
+                  className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold py-4 px-6 rounded-lg hover:from-green-700 hover:to-emerald-700 active:scale-95 transition-all duration-200 text-lg sm:text-xl touch-manipulation min-h-[48px]"
                 >
                   Secure My Spot Now →
                 </button>
@@ -212,27 +219,27 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Earnings Calculator - From Variation 1 */}
-        <section className="py-20 bg-gray-50">
+        {/* Earnings Calculator - Mobile Optimized */}
+        <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                 Calculate Your Potential Earnings
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
                 See exactly how much you could earn from bank bonuses in your state
               </p>
             </div>
             
-            <div className="bg-white rounded-3xl p-8 shadow-xl">
-              <div className="grid lg:grid-cols-2 gap-8 items-center">
-                <div className="space-y-6">
+            <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl">
+              <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
+                <div className="space-y-6 order-2 lg:order-1">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Select your state:</label>
                     <select 
                       value={selectedState}
                       onChange={(e) => setSelectedState(e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 text-gray-900"
+                      className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 text-gray-900 text-base touch-manipulation min-h-[48px] appearance-none bg-white"
                     >
                       <option value="ca">California</option>
                       <option value="tx">Texas</option>
@@ -246,27 +253,27 @@ export default function Home() {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Do you have direct deposit?</label>
-                    <div className="flex space-x-4">
-                      <label className="flex items-center">
+                    <label className="block text-sm font-medium text-gray-700 mb-3">Do you have direct deposit?</label>
+                    <div className="space-y-3 sm:space-y-0 sm:flex sm:space-x-6">
+                      <label className="flex items-center cursor-pointer touch-manipulation min-h-[44px]">
                         <input 
                           type="radio" 
                           name="dd" 
                           checked={hasDirectDeposit}
                           onChange={() => setHasDirectDeposit(true)}
-                          className="mr-2" 
+                          className="mr-3 w-4 h-4" 
                         />
-                        <span>Yes</span>
+                        <span className="text-sm sm:text-base">Yes</span>
                       </label>
-                      <label className="flex items-center">
+                      <label className="flex items-center cursor-pointer touch-manipulation min-h-[44px]">
                         <input 
                           type="radio" 
                           name="dd" 
                           checked={!hasDirectDeposit}
                           onChange={() => setHasDirectDeposit(false)}
-                          className="mr-2"
+                          className="mr-3 w-4 h-4"
                         />
-                        <span>No (we have workarounds!)</span>
+                        <span className="text-sm sm:text-base">No (we have workarounds!)</span>
                       </label>
                     </div>
                   </div>
@@ -276,7 +283,7 @@ export default function Home() {
                     <select 
                       value={creditScore}
                       onChange={(e) => setCreditScore(e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 text-gray-900"
+                      className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 text-gray-900 text-base touch-manipulation min-h-[48px] appearance-none bg-white"
                     >
                       <option value="excellent">750+ (Excellent)</option>
                       <option value="good">700-749 (Good)</option>
@@ -286,13 +293,13 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <div className="text-center">
-                  <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl p-8 text-white">
+                <div className="text-center order-1 lg:order-2">
+                  <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl p-6 sm:p-8 text-white">
                     <div className="mb-4">
-                      <div className="text-5xl font-bold animate-pulse">${earningsAmount.toLocaleString()}</div>
-                      <div className="text-xl opacity-90">potential earnings</div>
+                      <div className="text-3xl sm:text-4xl lg:text-5xl font-bold animate-pulse">${earningsAmount.toLocaleString()}</div>
+                      <div className="text-lg sm:text-xl opacity-90">potential earnings</div>
                     </div>
-                    <div className="text-lg">
+                    <div className="text-base sm:text-lg">
                       From <span className="font-semibold">{bonusCount}</span> eligible bonuses
                     </div>
                     <div className="text-sm opacity-75 mt-2">
@@ -300,7 +307,7 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  <button className="mt-6 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-200">
+                  <button className="mt-6 w-full sm:w-auto bg-green-600 hover:bg-green-700 active:scale-95 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 text-base sm:text-lg touch-manipulation min-h-[48px]">
                     See My Full Bonus List →
                   </button>
                 </div>
@@ -309,32 +316,32 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Success Stories - Community Elements */}
-        <section className="py-20 bg-white">
+        {/* Success Stories - Mobile Optimized */}
+        <section className="py-12 sm:py-16 lg:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-center mb-10 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                 Real Members, Real Results
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
                 See what our community members have accomplished with our platform and each other's support
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8 mb-16">
-              {/* Featured Success Story */}
-              <div className="lg:col-span-2 bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-lg">
-                <div className="flex items-start mb-6">
-                  <div className="w-15 h-15 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">
+            <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+              {/* Featured Success Story - Mobile Optimized */}
+              <div className="lg:col-span-2 bg-gradient-to-br from-white to-gray-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg">
+                <div className="flex flex-col sm:flex-row sm:items-start mb-6">
+                  <div className="w-12 h-12 sm:w-15 sm:h-15 bg-green-500 rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold mb-4 sm:mb-0 sm:mr-4 mx-auto sm:mx-0">
                     M
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center mb-2">
-                      <div>
-                        <div className="text-xl font-bold text-gray-900">Maria Rodriguez</div>
+                  <div className="flex-1 text-center sm:text-left">
+                    <div className="flex flex-col sm:flex-row sm:items-center mb-2 space-y-2 sm:space-y-0">
+                      <div className="flex-1">
+                        <div className="text-lg sm:text-xl font-bold text-gray-900">Maria Rodriguez</div>
                         <div className="text-sm text-gray-600">Teacher from Phoenix, AZ • Member since March 2024</div>
                       </div>
-                      <div className="ml-auto">
+                      <div className="sm:ml-4">
                         <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
                           💰 Earned $4,850
                         </span>
@@ -362,46 +369,54 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Quick Wins */}
-              <div className="space-y-6">
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 shadow-lg">
+              {/* Quick Wins - Mobile Optimized */}
+              <div className="space-y-4 sm:space-y-6">
+                <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-4 sm:p-6 shadow-lg">
                   <div className="flex items-start mb-4">
-                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-lg font-bold mr-3">
+                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-lg font-bold mr-3 flex-shrink-0">
                       J
                     </div>
-                    <div>
-                      <div className="font-semibold text-gray-900">James Chen</div>
-                      <div className="text-xs text-gray-500">Software Engineer, CA</div>
-                    </div>
-                    <div className="ml-auto">
-                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">$1,950</span>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
+                        <div>
+                          <div className="font-semibold text-gray-900">James Chen</div>
+                          <div className="text-xs text-gray-500">Software Engineer, CA</div>
+                        </div>
+                        <div className="mt-2 sm:mt-0 sm:ml-4">
+                          <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">$1,950</span>
+                        </div>
+                      </div>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        "The community Slack is incredible. I get notifications when new bonuses drop, 
+                        and members share data points in real-time. Earned my first $600 in week 1!"
+                      </p>
+                      <div className="mt-3 text-xs text-gray-500">Member for 4 months</div>
                     </div>
                   </div>
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    "The community Slack is incredible. I get notifications when new bonuses drop, 
-                    and members share data points in real-time. Earned my first $600 in week 1!"
-                  </p>
-                  <div className="mt-3 text-xs text-gray-500">Member for 4 months</div>
                 </div>
 
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 shadow-lg">
+                <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-4 sm:p-6 shadow-lg">
                   <div className="flex items-start mb-4">
-                    <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white text-lg font-bold mr-3">
+                    <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white text-lg font-bold mr-3 flex-shrink-0">
                       S
                     </div>
-                    <div>
-                      <div className="font-semibold text-gray-900">Sarah Kim</div>
-                      <div className="text-xs text-gray-500">Nurse, TX</div>
-                    </div>
-                    <div className="ml-auto">
-                      <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">$2,340</span>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
+                        <div>
+                          <div className="font-semibold text-gray-900">Sarah Kim</div>
+                          <div className="text-xs text-gray-500">Nurse, TX</div>
+                        </div>
+                        <div className="mt-2 sm:mt-0 sm:ml-4">
+                          <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">$2,340</span>
+                        </div>
+                      </div>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        "I love the weekly wins thread! Seeing everyone celebrate their bonuses 
+                        keeps me motivated. The step-by-step guides made everything so easy."
+                      </p>
+                      <div className="mt-3 text-xs text-gray-500">Member for 6 months</div>
                     </div>
                   </div>
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    "I love the weekly wins thread! Seeing everyone celebrate their bonuses 
-                    keeps me motivated. The step-by-step guides made everything so easy."
-                  </p>
-                  <div className="mt-3 text-xs text-gray-500">Member for 6 months</div>
                 </div>
               </div>
             </div>
@@ -432,10 +447,10 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Final CTA */}
-            <div className="bg-white rounded-3xl p-8 max-w-xl mx-auto shadow-2xl">
+            {/* Final CTA - Mobile Optimized */}
+            <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-xl mx-auto shadow-2xl">
               <div className="text-gray-900 mb-6">
-                <h3 className="text-2xl font-bold mb-2">Join Our Community Today</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-2">Join Our Community Today</h3>
                 <p className="text-gray-600">Start your journey with thousands of successful members</p>
               </div>
               
@@ -443,19 +458,19 @@ export default function Home() {
                 <input 
                   type="email" 
                   placeholder="Enter your email to join"
-                  className="w-full px-4 py-4 border border-gray-300 rounded-lg text-gray-900 text-lg focus:ring-2 focus:ring-green-500"
+                  className="w-full px-4 py-4 border border-gray-300 rounded-lg text-gray-900 text-base sm:text-lg focus:ring-2 focus:ring-green-500 touch-manipulation"
                   required
                 />
                 <button 
                   type="submit"
-                  className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 px-6 rounded-lg transition duration-200 text-xl"
+                  className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 active:scale-95 text-white font-bold py-4 px-6 rounded-lg transition-all duration-200 text-lg sm:text-xl touch-manipulation min-h-[48px]"
                 >
                   Join {memberCount.toLocaleString()}+ Smart Savers →
                 </button>
               </form>
               
               <div className="mt-6 space-y-2 text-center">
-                <div className="text-sm text-gray-600">
+                <div className="text-sm text-gray-600 leading-relaxed">
                   💳 No setup fees • 👥 Instant community access • 🎯 Personalized matching
                 </div>
                 <div className="text-xs text-gray-500">
